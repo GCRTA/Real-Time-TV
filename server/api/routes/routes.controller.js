@@ -10,200 +10,415 @@ exports.nearby = function (req, res) {
   if (process.env.NODE_ENV !== 'production') {
     console.log('Returning mock data');
     const mockRoutes = [
+        {
+            "alerts": [
+                {
+                    "created_at": 1738926300,
+                    "description": "Effective April 17, 24/7 single-track operations will begin at W.117-Madison and Triskett stations for rehabilitation of the eastbound bridge over W.117th Street. Boarding and alighting at W. 117-Madison and Triskett stations will take place on the south side of the platforms.",
+                    "effect": "MODIFIED_SERVICE",
+                    "severity": "Info",
+                    "title": "Effective April 17, 24/7 single-track operations will begin at W.117-Madison and Triskett stations"
+                },
+                {
+                    "created_at": 1735326900,
+                    "description": "The Red Line W.117–Madison Station closes July 17, 2024 until further notice. All other Red Line stations remain in service. Bus service at W.117–Madison: #25, east-west; #78 north-south; and the #26-26A on Detroit Ave., approximately one-half mile north of the station.",
+                    "effect": "NO_SERVICE",
+                    "severity": "Severe",
+                    "title": "The Red Line W.117–Madison Station closes July 17, 2024 until further notice."
+                },
+                {
+                    "created_at": 1746198780,
+                    "description": "Effective Monday, February 17, 2025, Red, Blue, and Green Line riders heading westbound into and out of Tower City will utilize the Track 7 platform until further notice.\n\nThe elevator and stairway leading to Track 7 can be found on the Public Square Level (M2) of Tower City Center.",
+                    "effect": "STOP_MOVED",
+                    "severity": "Warning",
+                    "title": "Red, Blue, and Green Line trains will start using the Track 7 platform at Tower City on Monday, Feb. 17."
+                }
+            ],
+            "compact_display_short_name": {
+                "boxed_text": "",
+                "elements": [
+                    null,
+                    "Red",
+                    null
+                ],
+                "route_name_redundancy": false
+            },
+            "fares": [
+                {
+                    "fare_media_type": 0,
+                    "price_max": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    },
+                    "price_min": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    }
+                },
+                {
+                    "fare_media_type": 1,
+                    "price_max": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    },
+                    "price_min": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    }
+                },
+                {
+                    "fare_media_type": 4,
+                    "price_max": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    },
+                    "price_min": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    }
+                }
+            ],
+            "global_route_id": "GCRTA:32021",
+            "itineraries": [
+                {
+                    "branch_code": "",
+                    "closest_stop": {
+                        "global_stop_id": "GCRTA:49175",
+                        "location_type": 0,
+                        "parent_station": {
+                            "global_stop_id": "GCRTA:31146",
+                            "location_type": 1,
+                            "rt_stop_id": "place_tcc",
+                            "station_code": "",
+                            "station_name": "Tower City-Public Sq Station"
+                        },
+                        "parent_station_global_stop_id": "GCRTA:31146",
+                        "route_type": 1,
+                        "rt_stop_id": "29002",
+                        "stop_code": "29002",
+                        "stop_lat": 41.49720334259818,
+                        "stop_lon": -81.69432222859776,
+                        "stop_name": "Tower City Station",
+                        "wheelchair_boarding": 0
+                    },
+                    "direction_headsign": "Stokes / Windermere",
+                    "direction_id": 0,
+                    "headsign": "Stokes / Windermere",
+                    "merged_headsign": "Stokes / Windermere",
+                    "schedule_items": [
+                        {
+                            "departure_time": 1750793083,
+                            "is_cancelled": false,
+                            "is_real_time": true,
+                            "rt_trip_id": "18660814",
+                            "scheduled_departure_time": 1750792800,
+                            "trip_search_key": "GCRTA:48668005:227:22:44",
+                            "wheelchair_accessible": 0
+                        },
+                        {
+                            "departure_time": 1750793700,
+                            "is_cancelled": false,
+                            "is_real_time": false,
+                            "rt_trip_id": "18660815",
+                            "scheduled_departure_time": 1750793700,
+                            "trip_search_key": "GCRTA:48668005:227:22:45",
+                            "wheelchair_accessible": 1
+                        },
+                        {
+                            "departure_time": 1750794744,
+                            "is_cancelled": false,
+                            "is_real_time": true,
+                            "rt_trip_id": "18660816",
+                            "scheduled_departure_time": 1750794600,
+                            "trip_search_key": "GCRTA:48668005:227:22:46",
+                            "wheelchair_accessible": 0
+                        }
+                    ]
+                },
+                {
+                    "branch_code": "",
+                    "closest_stop": {
+                        "global_stop_id": "GCRTA:49156",
+                        "location_type": 0,
+                        "parent_station": {
+                            "global_stop_id": "GCRTA:31146",
+                            "location_type": 1,
+                            "rt_stop_id": "place_tcc",
+                            "station_code": "",
+                            "station_name": "Tower City-Public Sq Station"
+                        },
+                        "parent_station_global_stop_id": "GCRTA:31146",
+                        "route_type": 1,
+                        "rt_stop_id": "29003",
+                        "stop_code": "29003",
+                        "stop_lat": 41.49775192800283,
+                        "stop_lon": -81.69425927617428,
+                        "stop_name": "Tower City Station",
+                        "wheelchair_boarding": 0
+                    },
+                    "direction_headsign": "Airport",
+                    "direction_id": 1,
+                    "headsign": "Airport",
+                    "merged_headsign": "Airport",
+                    "schedule_items": [
+                        {
+                            "departure_time": 1750793251,
+                            "is_cancelled": false,
+                            "is_real_time": true,
+                            "rt_trip_id": "18660732",
+                            "scheduled_departure_time": 1750793220,
+                            "trip_search_key": "GCRTA:48668005:226:22:48",
+                            "wheelchair_accessible": 0
+                        },
+                        {
+                            "departure_time": 1750794120,
+                            "is_cancelled": false,
+                            "is_real_time": false,
+                            "rt_trip_id": "18660733",
+                            "scheduled_departure_time": 1750794120,
+                            "trip_search_key": "GCRTA:48668005:226:22:49",
+                            "wheelchair_accessible": 1
+                        },
+                        {
+                            "departure_time": 1750795020,
+                            "is_cancelled": false,
+                            "is_real_time": false,
+                            "rt_trip_id": "18660734",
+                            "scheduled_departure_time": 1750795020,
+                            "trip_search_key": "GCRTA:48668005:226:22:50",
+                            "wheelchair_accessible": 1
+                        }
+                    ]
+                }
+            ],
+            "mode_name": "Subway",
+            "real_time_route_id": "66",
+            "route_color": "d7182a",
+            "route_display_short_name": {
+                "boxed_text": "",
+                "elements": [
+                    "vehicle-rail-a650",
+                    "",
+                    null
+                ],
+                "route_name_redundancy": true
+            },
+            "route_image": "",
+            "route_long_name": "",
+            "route_network_id": "GCRTA|Cleveland",
+            "route_network_name": "GCRTA",
+            "route_short_name": "Red",
+            "route_text_color": "ffffff",
+            "route_timezone": "America/New_York",
+            "route_type": 1,
+            "sorting_key": "Red",
+            "tts_long_name": "",
+            "tts_short_name": "red line",
+            "vehicle": {
+                "image": "vehicle-rail-a650",
+                "name": "train",
+                "name_inflection": "n"
+            }
+    },
       {
-          "alerts": [
-              {
-                  "created_at": 1735326900,
-                  "description": "The Red Line W.117–Madison Station closes July 17, 2024 until further notice. All other Red Line stations remain in service. Bus service at W.117–Madison: #25, east-west; #78 north-south; and the #26-26A on Detroit Ave., approximately one-half mile north of the station.",
-                  "effect": "NO_SERVICE",
-                  "severity": "Severe",
-                  "title": "The Red Line W.117–Madison Station closes July 17, 2024 until further notice."
-              }
-          ],
-          "compact_display_short_name": {
-              "boxed_text": "",
-              "elements": [
-                  null,
-                  "Red",
-                  null
-              ],
-              "route_name_redundancy": false
-          },
-          "fares": [
-              {
-                  "fare_media_type": 0,
-                  "price_max": {
-                      "currency_code": "USD",
-                      "symbol": "$",
-                      "text": "$ 2.50",
-                      "value": 2.5
-                  },
-                  "price_min": {
-                      "currency_code": "USD",
-                      "symbol": "$",
-                      "text": "$ 2.50",
-                      "value": 2.5
-                  }
-              },
-              {
-                  "fare_media_type": 1,
-                  "price_max": {
-                      "currency_code": "USD",
-                      "symbol": "$",
-                      "text": "$ 2.50",
-                      "value": 2.5
-                  },
-                  "price_min": {
-                      "currency_code": "USD",
-                      "symbol": "$",
-                      "text": "$ 2.50",
-                      "value": 2.5
-                  }
-              },
-              {
-                  "fare_media_type": 4,
-                  "price_max": {
-                      "currency_code": "USD",
-                      "symbol": "$",
-                      "text": "$ 2.50",
-                      "value": 2.5
-                  },
-                  "price_min": {
-                      "currency_code": "USD",
-                      "symbol": "$",
-                      "text": "$ 2.50",
-                      "value": 2.5
-                  }
-              }
-          ],
-          "global_route_id": "GCRTA:32021",
-          "itineraries": [
-              {
-                  "branch_code": "",
-                  "closest_stop": {
-                      "global_stop_id": "GCRTA:55444",
-                      "location_type": 0,
-                      "parent_station_global_stop_id": "GCRTA:31138",
-                      "route_type": 1,
-                      "rt_stop_id": "28908",
-                      "stop_code": "28908",
-                      "stop_lat": 41.41986179374579,
-                      "stop_lon": -81.82350959479132,
-                      "stop_name": "Brookpark Station",
-                      "wheelchair_boarding": 0
-                  },
-                  "direction_headsign": "Stokes / Windermere",
-                  "direction_id": 0,
-                  "headsign": "Stokes / Windermere",
-                  "merged_headsign": "Stokes / Windermere",
-                  "schedule_items": [
-                      {
-                          "departure_time": 1749148800,
-                          "is_cancelled": false,
-                          "is_real_time": false,
-                          "rt_trip_id": "18544891",
-                          "scheduled_departure_time": 1749148800,
-                          "trip_search_key": "GCRTA:48668005:227:3:43",
-                          "wheelchair_accessible": 1
-                      },
-                      {
-                          "departure_time": 1749149861,
-                          "is_cancelled": false,
-                          "is_real_time": true,
-                          "rt_trip_id": "18544892",
-                          "scheduled_departure_time": 1749149700,
-                          "trip_search_key": "GCRTA:48668005:227:3:44",
-                          "wheelchair_accessible": 0
-                      },
-                      {
-                          "departure_time": 1749150600,
-                          "is_cancelled": false,
-                          "is_real_time": false,
-                          "rt_trip_id": "18544893",
-                          "scheduled_departure_time": 1749150600,
-                          "trip_search_key": "GCRTA:48668005:227:3:45",
-                          "wheelchair_accessible": 1
-                      }
-                  ]
-              },
-              {
-                  "branch_code": "",
-                  "closest_stop": {
-                      "global_stop_id": "GCRTA:55443",
-                      "location_type": 0,
-                      "parent_station_global_stop_id": "GCRTA:31138",
-                      "route_type": 1,
-                      "rt_stop_id": "28897",
-                      "stop_code": "28897",
-                      "stop_lat": 41.41988877335585,
-                      "stop_lon": -81.82356355401144,
-                      "stop_name": "Brookpark Station",
-                      "wheelchair_boarding": 0
-                  },
-                  "direction_headsign": "Airport",
-                  "direction_id": 1,
-                  "headsign": "Airport",
-                  "merged_headsign": "Airport",
-                  "schedule_items": [
-                      {
-                          "departure_time": 1749148758,
-                          "is_cancelled": false,
-                          "is_real_time": true,
-                          "rt_trip_id": "18544805",
-                          "scheduled_departure_time": 1749148560,
-                          "trip_search_key": "GCRTA:48668005:226:3:43",
-                          "wheelchair_accessible": 0
-                      },
-                      {
-                          "departure_time": 1749149621,
-                          "is_cancelled": false,
-                          "is_real_time": true,
-                          "rt_trip_id": "18544806",
-                          "scheduled_departure_time": 1749149460,
-                          "trip_search_key": "GCRTA:48668005:226:3:44",
-                          "wheelchair_accessible": 0
-                      },
-                      {
-                          "departure_time": 1749150360,
-                          "is_cancelled": false,
-                          "is_real_time": false,
-                          "rt_trip_id": "18544807",
-                          "scheduled_departure_time": 1749150360,
-                          "trip_search_key": "GCRTA:48668005:226:3:45",
-                          "wheelchair_accessible": 1
-                      }
-                  ]
-              }
-          ],
-          "mode_name": "Subway",
-          "real_time_route_id": "66",
-          "route_color": "d7182a",
-          "route_display_short_name": {
-              "boxed_text": "",
-              "elements": [
-                  "vehicle-rail-a650",
-                  "",
-                  null
-              ],
-              "route_name_redundancy": true
-          },
-          "route_image": "",
-          "route_long_name": "",
-          "route_network_id": "GCRTA|Cleveland",
-          "route_network_name": "GCRTA",
-          "route_short_name": "Red",
-          "route_text_color": "ffffff",
-          "route_timezone": "America/New_York",
-          "route_type": 1,
-          "sorting_key": "Red",
-          "tts_long_name": "",
-          "tts_short_name": "red line",
-          "vehicle": {
-              "image": "vehicle-rail-a650",
-              "name": "train",
-              "name_inflection": "n"
-          }
-      },
+        "alerts": [
+            {
+                "created_at": 1746198780,
+                "description": "Effective Monday, February 17, 2025, Red, Blue, and Green Line riders heading westbound into and out of Tower City will utilize the Track 7 platform until further notice.\n\nThe elevator and stairway leading to Track 7 can be found on the Public Square Level (M2) of Tower City Center.",
+                "effect": "STOP_MOVED",
+                "severity": "Warning",
+                "title": "Red, Blue, and Green Line trains will start using the Track 7 platform at Tower City on Monday, Feb. 17."
+            },
+            {
+                "created_at": 1748853420,
+                "description": "The East 79th Blue/Green Line station closes June 9, 2025 and will remain closed for 12-14 months for improvements to be made.\n\nThe #2 East 79th Street bus route will continue to serve the station on weekdays. Seven-day RTA routes in the vicinity include the Red Line and the #14-#14A Kinsman bus route.\n\nCustomers of the East 79th Blue/Green Line station can call 216-621-9500 to access the RTA Community Connection Line to learn about alternatives.",
+                "effect": "REDUCED_SERVICE",
+                "severity": "Warning",
+                "title": "The East 79th Blue/Green Line station closes June 9, 2025"
+            }
+        ],
+        "compact_display_short_name": {
+            "boxed_text": "",
+            "elements": [
+                "san-diego-trolley",
+                "",
+                null
+            ],
+            "route_name_redundancy": false
+        },
+        "fares": [
+            {
+                "fare_media_type": 0,
+                "price_max": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                },
+                "price_min": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                }
+            },
+            {
+                "fare_media_type": 1,
+                "price_max": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                },
+                "price_min": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                }
+            },
+            {
+                "fare_media_type": 4,
+                "price_max": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                },
+                "price_min": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                }
+            }
+        ],
+        "global_route_id": "GCRTA:15348",
+        "itineraries": [
+            {
+                "branch_code": "",
+                "closest_stop": {
+                    "global_stop_id": "GCRTA:52818",
+                    "location_type": 0,
+                    "parent_station": {
+                        "global_stop_id": "GCRTA:31146",
+                        "location_type": 1,
+                        "rt_stop_id": "place_tcc",
+                        "station_code": "",
+                        "station_name": "Tower City-Public Sq Station"
+                    },
+                    "parent_station_global_stop_id": "GCRTA:31146",
+                    "route_type": 0,
+                    "rt_stop_id": "28916",
+                    "stop_code": "28916",
+                    "stop_lat": 41.49714938337804,
+                    "stop_lon": -81.69362975193943,
+                    "stop_name": "Tower City Station",
+                    "wheelchair_boarding": 0
+                },
+                "direction_headsign": "Green Road",
+                "direction_id": 0,
+                "headsign": "Green Road",
+                "merged_headsign": "Green Road",
+                "schedule_items": [
+                    {
+                        "departure_time": 1750793400,
+                        "is_cancelled": false,
+                        "is_real_time": false,
+                        "rt_trip_id": "18660940",
+                        "scheduled_departure_time": 1750793400,
+                        "trip_search_key": "GCRTA:48668005:218:22:22",
+                        "wheelchair_accessible": 1
+                    },
+                    {
+                        "departure_time": 1750795200,
+                        "is_cancelled": false,
+                        "is_real_time": false,
+                        "rt_trip_id": "18660941",
+                        "scheduled_departure_time": 1750795200,
+                        "trip_search_key": "GCRTA:48668005:218:22:23",
+                        "wheelchair_accessible": 1
+                    },
+                    {
+                        "departure_time": 1750797000,
+                        "is_cancelled": false,
+                        "is_real_time": false,
+                        "rt_trip_id": "18660942",
+                        "scheduled_departure_time": 1750797000,
+                        "trip_search_key": "GCRTA:48668005:218:22:24",
+                        "wheelchair_accessible": 1
+                    }
+                ]
+            },
+            {
+                "branch_code": "",
+                "closest_stop": {
+                    "global_stop_id": "GCRTA:52807",
+                    "location_type": 0,
+                    "parent_station": {
+                        "global_stop_id": "GCRTA:31146",
+                        "location_type": 1,
+                        "rt_stop_id": "place_tcc",
+                        "station_code": "",
+                        "station_name": "Tower City-Public Sq Station"
+                    },
+                    "parent_station_global_stop_id": "GCRTA:31146",
+                    "route_type": 0,
+                    "rt_stop_id": "28885",
+                    "stop_code": "28885",
+                    "stop_lat": 41.49770696198605,
+                    "stop_lon": -81.69360277232937,
+                    "stop_name": "Tower City Station",
+                    "wheelchair_boarding": 0
+                },
+                "direction_headsign": "Tower City / Public Square",
+                "direction_id": 1,
+                "headsign": "Tower City / Public Square",
+                "merged_headsign": "Tower City / Public Square",
+                "schedule_items": []
+            }
+        ],
+        "mode_name": "Light Rail",
+        "real_time_route_id": "67",
+        "route_color": "8fb73e",
+        "route_display_short_name": {
+            "boxed_text": "",
+            "elements": [
+                "san-diego-trolley",
+                "",
+                null
+            ],
+            "route_name_redundancy": true
+        },
+        "route_image": "",
+        "route_long_name": "Green Line",
+        "route_network_id": "GCRTA|Cleveland",
+        "route_network_name": "GCRTA",
+        "route_short_name": "Green",
+        "route_text_color": "000000",
+        "route_timezone": "America/New_York",
+        "route_type": 0,
+        "sorting_key": "Green",
+        "tts_long_name": "Green Line",
+        "tts_short_name": "Green line",
+        "vehicle": {
+            "image": "san-diego-trolley",
+            "name": "vehicle",
+            "name_inflection": "n"
+        }
+    },
       {
           "alerts": [],
           "compact_display_short_name": {
@@ -1291,7 +1506,179 @@ exports.nearby = function (req, res) {
               "name": "bus",
               "name_inflection": "n"
           }
-      }
+      },
+      {
+        "alerts": [],
+        "compact_display_short_name": {
+            "boxed_text": "",
+            "elements": [
+                "bus-new",
+                "",
+                null
+            ],
+            "route_name_redundancy": false
+        },
+        "fares": [
+            {
+                "fare_media_type": 0,
+                "price_max": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                },
+                "price_min": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                }
+            },
+            {
+                "fare_media_type": 1,
+                "price_max": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                },
+                "price_min": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                }
+            },
+            {
+                "fare_media_type": 4,
+                "price_max": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                },
+                "price_min": {
+                    "currency_code": "USD",
+                    "symbol": "$",
+                    "text": "$ 2.50",
+                    "value": 2.5
+                }
+            }
+        ],
+        "global_route_id": "GCRTA:107512",
+        "itineraries": [
+            {
+                "branch_code": "",
+                "closest_stop": {
+                    "global_stop_id": "GCRTA:53788",
+                    "location_type": 0,
+                    "parent_station": {
+                        "global_stop_id": "GCRTA:31125",
+                        "location_type": 1,
+                        "rt_stop_id": "place_pusq",
+                        "station_code": "",
+                        "station_name": "Public Square"
+                    },
+                    "parent_station_global_stop_id": "GCRTA:31125",
+                    "route_type": 3,
+                    "rt_stop_id": "12527",
+                    "stop_code": "12527",
+                    "stop_lat": 41.49888507162554,
+                    "stop_lon": -81.69353981990588,
+                    "stop_name": "Euclid Av / Ontario St Station",
+                    "wheelchair_boarding": 0
+                },
+                "direction_headsign": "Stokes Windermere Station",
+                "direction_id": 0,
+                "headsign": "Stokes Windermere Station",
+                "merged_headsign": "Stokes Windermere Station",
+                "schedule_items": [
+                    {
+                        "departure_time": 1750793100,
+                        "is_cancelled": false,
+                        "is_real_time": true,
+                        "rt_trip_id": "18669459",
+                        "scheduled_departure_time": 1750793100,
+                        "trip_search_key": "GCRTA:48668005:224:22:51",
+                        "wheelchair_accessible": 0
+                    },
+                    {
+                        "departure_time": 1750794000,
+                        "is_cancelled": false,
+                        "is_real_time": true,
+                        "rt_trip_id": "18669461",
+                        "scheduled_departure_time": 1750794000,
+                        "trip_search_key": "GCRTA:48668005:224:22:52",
+                        "wheelchair_accessible": 0
+                    },
+                    {
+                        "departure_time": 1750794900,
+                        "is_cancelled": false,
+                        "is_real_time": false,
+                        "rt_trip_id": "18669463",
+                        "scheduled_departure_time": 1750794900,
+                        "trip_search_key": "GCRTA:48668005:224:22:53",
+                        "wheelchair_accessible": 1
+                    }
+                ]
+            },
+            {
+                "branch_code": "",
+                "closest_stop": {
+                    "global_stop_id": "GCRTA:53788",
+                    "location_type": 0,
+                    "parent_station": {
+                        "global_stop_id": "GCRTA:31125",
+                        "location_type": 1,
+                        "rt_stop_id": "place_pusq",
+                        "station_code": "",
+                        "station_name": "Public Square"
+                    },
+                    "parent_station_global_stop_id": "GCRTA:31125",
+                    "route_type": 3,
+                    "rt_stop_id": "12527",
+                    "stop_code": "12527",
+                    "stop_lat": 41.49888507162554,
+                    "stop_lon": -81.69353981990588,
+                    "stop_name": "Euclid Av / Ontario St Station",
+                    "wheelchair_boarding": 0
+                },
+                "direction_headsign": "Public Square",
+                "direction_id": 1,
+                "headsign": "Public Square",
+                "merged_headsign": "Public Square",
+                "schedule_items": []
+            }
+        ],
+        "mode_name": "Bus",
+        "real_time_route_id": "6",
+        "route_color": "959595",
+        "route_display_short_name": {
+            "boxed_text": "",
+            "elements": [
+                "gcrta-healthline",
+                "",
+                null
+            ],
+            "route_name_redundancy": false
+        },
+        "route_image": "",
+        "route_long_name": "",
+        "route_network_id": "GCRTA|Cleveland",
+        "route_network_name": "GCRTA",
+        "route_short_name": "HealthLine",
+        "route_text_color": "000000",
+        "route_timezone": "America/New_York",
+        "route_type": 3,
+        "sorting_key": "HealthLine",
+        "tts_long_name": "",
+        "tts_short_name": "HealthLine",
+        "vehicle": {
+            "image": "bus-new",
+            "name": "bus",
+            "name_inflection": "n"
+        }
+    }
   ];
     console.log('Mock data:', JSON.stringify(mockRoutes, null, 2));
     return res.json({ routes: mockRoutes });
