@@ -87,7 +87,8 @@ function RouteItemCtrl(Nearby) {
     if (route.mode_name === 'Subway' || route.mode_name === 'Light Rail') {
       return route.route_short_name + ' Line';
     }
-    return route.route_display_short_name.elements[1];
+    // Fallback to route_short_name if elements[1] is empty or falsy
+    return (route.route_display_short_name && route.route_display_short_name.elements[1]) || route.route_short_name;
   }
 
   function hasAlerts(route) {
