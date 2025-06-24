@@ -9,7 +9,7 @@
   -webkit-transform: perspective(1px) translate(-50%, 0);
           transform: perspective(1px) translate(-50%, 0);
 
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-weight: lighter;
 
   margin: 0;
@@ -41,7 +41,7 @@
   display: block;
 
   font-size: 1.2em;
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 
   margin: 5px 0;
 }

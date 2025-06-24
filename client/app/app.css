@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,700&display=swap');
+
 * {
   -webkit-font-smoothing: antialiased;
   font-smooth: antialiased;
@@ -10,7 +12,7 @@ body > div[ui-view] {
   height: 100%;
   width: 100%;
 
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-size: 12px;
 
   padding: 0;
@@ -21,7 +23,7 @@ body > div[ui-view] {
 
 
 h1, h2, h3, h4 {
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-weight: bold;
   margin: 0;
 

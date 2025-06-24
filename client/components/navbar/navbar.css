@@ -1,6 +1,7 @@
 header {
   color: #ffffff;
   background-color: #062743;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 header table {
@@ -23,7 +24,7 @@ header table {
   color: #ffffff;
 
   line-height: 1.1em;
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-weight: lighter;
   font-size: 2.0em;
   text-decoration: none;
@@ -40,6 +41,7 @@ header table {
 } */
 #logo p{
   font-size: 1.5em;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 .transit-app-powered{
   height: 40px;
@@ -53,7 +55,7 @@ header table {
 }
 
 #title h1 {
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-size: 2em;
   vertical-align: middle;
   display: inline-block;
@@ -87,11 +89,12 @@ header table {
   min-width: 20em;
   text-align: right;
   vertical-align: middle;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 .clock {
   font-size: 1.8em;
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   line-height: 2em;
   display: inline-block;
   margin-left: 3em;

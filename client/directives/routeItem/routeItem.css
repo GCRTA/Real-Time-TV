@@ -6,6 +6,7 @@
   flex: 1 1 calc(100% / var(--routes-per-row, 4));
   min-width: 300px;
   max-width: 100%;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 .with-map .route {
@@ -87,6 +88,7 @@
   font-size: var(--route-title-size, 2em);
   padding: 0.4em 0.35em 0.3em 0.35em;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 .route .white h3 {
@@ -106,18 +108,16 @@
 .route i {
   font-size: 0.8em;
   font-style: normal;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 .route small {
   color: inherit;
-
-  font-family: Helvetica, Arial, serif;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
   font-weight: lighter;
   font-size: 0.4em;
   line-height: 0.4em;
-
   display: block;
-
   margin-bottom: 0.4em;
   margin-top: 0.2em;
 }
@@ -176,12 +176,14 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 .route .alert-icon {
   display: inline-block;
   font-size: 1.2em;
   cursor: help;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
 @-webkit-keyframes realtimeAnim {
