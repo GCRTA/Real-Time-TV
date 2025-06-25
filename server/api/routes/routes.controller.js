@@ -11,6 +11,166 @@ exports.nearby = function (req, res) {
     console.log('Returning mock data');
     const mockRoutes = [
         {
+            "alerts": [],
+            "compact_display_short_name": {
+                "boxed_text": "",
+                "elements": [
+                    "vehicle-bus-gilligtrolley",
+                    "",
+                    null
+                ],
+                "route_name_redundancy": false
+            },
+            "fares": [
+                {
+                    "fare_media_type": 0,
+                    "price_max": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    },
+                    "price_min": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    }
+                },
+                {
+                    "fare_media_type": 1,
+                    "price_max": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    },
+                    "price_min": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    }
+                },
+                {
+                    "fare_media_type": 4,
+                    "price_max": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    },
+                    "price_min": {
+                        "currency_code": "USD",
+                        "symbol": "$",
+                        "text": "$ 2.50",
+                        "value": 2.5
+                    }
+                }
+            ],
+            "global_route_id": "GCRTA:193468",
+            "itineraries": [
+                {
+                    "branch_code": "",
+                    "closest_stop": {
+                        "global_stop_id": "GCRTA:48966",
+                        "location_type": 0,
+                        "parent_station": null,
+                        "parent_station_global_stop_id": null,
+                        "route_type": 3,
+                        "rt_stop_id": "08957",
+                        "stop_code": "08957",
+                        "stop_lat": 41.50059378026298,
+                        "stop_lon": -81.69949332052684,
+                        "stop_name": "W 6th St / Johnson Ct",
+                        "wheelchair_boarding": 0
+                    },
+                    "direction_headsign": "B Line Trolley Loop",
+                    "direction_id": 0,
+                    "headsign": "B Line Trolley Loop",
+                    "merged_headsign": "B Line Trolley Loop",
+                    "schedule_items": [
+                        {
+                            "departure_time": 1750862880,
+                            "is_cancelled": false,
+                            "is_real_time": false,
+                            "rt_trip_id": "18601130",
+                            "scheduled_departure_time": 1750862880,
+                            "trip_search_key": "GCRTA:48850813:209:2:16",
+                            "wheelchair_accessible": 1
+                        },
+                        {
+                            "departure_time": 1750863780,
+                            "is_cancelled": false,
+                            "is_real_time": false,
+                            "rt_trip_id": "18601180",
+                            "scheduled_departure_time": 1750863780,
+                            "trip_search_key": "GCRTA:48850813:209:2:17",
+                            "wheelchair_accessible": 1
+                        },
+                        {
+                            "departure_time": 1750864680,
+                            "is_cancelled": false,
+                            "is_real_time": false,
+                            "rt_trip_id": "18601128",
+                            "scheduled_departure_time": 1750864680,
+                            "trip_search_key": "GCRTA:48850813:209:2:18",
+                            "wheelchair_accessible": 1
+                        }
+                    ]
+                },
+                {
+                    "branch_code": "",
+                    "closest_stop": {
+                        "global_stop_id": "GCRTA:48966",
+                        "location_type": 0,
+                        "parent_station": null,
+                        "parent_station_global_stop_id": null,
+                        "route_type": 3,
+                        "rt_stop_id": "08957",
+                        "stop_code": "08957",
+                        "stop_lat": 41.50059378026298,
+                        "stop_lon": -81.69949332052684,
+                        "stop_name": "W 6th St / Johnson Ct",
+                        "wheelchair_boarding": 0
+                    },
+                    "direction_headsign": "B Line Trolley Loop",
+                    "direction_id": 1,
+                    "headsign": "B Line Trolley Loop",
+                    "merged_headsign": "B Line Trolley Loop",
+                    "schedule_items": []
+                }
+            ],
+            "mode_name": "Bus",
+            "real_time_route_id": "62",
+            "route_color": "fec00f",
+            "route_display_short_name": {
+                "boxed_text": "",
+                "elements": [
+                    "vehicle-bus-gilligtrolley",
+                    "B-Line",
+                    null
+                ],
+                "route_name_redundancy": true
+            },
+            "route_image": "",
+            "route_long_name": "",
+            "route_network_id": "GCRTA|Cleveland",
+            "route_network_name": "GCRTA",
+            "route_short_name": "Trolley",
+            "route_text_color": "000000",
+            "route_timezone": "America/New_York",
+            "route_type": 3,
+            "sorting_key": "Trolley",
+            "tts_long_name": "",
+            "tts_short_name": "Trolley",
+            "vehicle": {
+                "image": "vehicle-bus-gilligtrolley",
+                "name": "bus",
+                "name_inflection": "n"
+            }
+        },
+        {
             "alerts": [
                 {
                     "created_at": 1738926300,
