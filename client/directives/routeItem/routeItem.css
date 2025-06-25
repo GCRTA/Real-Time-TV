@@ -5,7 +5,7 @@
   box-sizing: border-box; */
   flex: 1 1 calc(100% / var(--routes-per-row, 4));
   min-width: 300px;
-  max-width: 475px;
+  max-width: 100%;
   font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
 }
 
