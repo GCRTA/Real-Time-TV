@@ -443,7 +443,11 @@ li.alert-details::after{
     transform: translateY(-50%);
     left: -2.5em;
 }
-
+li.alert-details.alert-severe,
+li.alert-details.alert-warning,
+li.alert-details.alert-info{
+  background: none;
+}
 li.alert-details.alert-severe::after{
   background-color: #ff0f0f;
   border: 3px solid #760000;
