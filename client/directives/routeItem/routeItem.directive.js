@@ -32,6 +32,7 @@ function RouteItemCtrl(Nearby) {
     getImageSize: getImageSize,
     getRouteName: getRouteName,
     hasAlerts: hasAlerts,
+    getSortedAlerts: getSortedAlerts,
 
     hasShownDeparture: Nearby.hasShownDeparture,
     shouldShowDeparture: shouldShowDeparture
@@ -93,5 +94,13 @@ function RouteItemCtrl(Nearby) {
 
   function hasAlerts(route) {
     return route.alerts && route.alerts.length > 0;
+  }
+
+  function getSortedAlerts(route) {
+    if (!route.alerts) return [];
+    const severityOrder = { 'Severe': 0, 'Warning': 1, 'Info': 2 };
+    return route.alerts.slice().sort(function(a, b) {
+      return (severityOrder[a.severity] ?? 99) - (severityOrder[b.severity] ?? 99);
+    });
   }
 }
