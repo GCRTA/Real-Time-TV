@@ -9,6 +9,7 @@ var server = require('http').createServer(app);
 
 require('./config/express')(app);
 require('./routes')(app);
+require('./api');
 
 // Start server
 server.listen(config.port, config.ip, function () {

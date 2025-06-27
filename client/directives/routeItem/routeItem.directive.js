@@ -36,7 +36,8 @@ function RouteItemCtrl(Nearby) {
     hasSevereAlert: hasSevereAlert,
 
     hasShownDeparture: Nearby.hasShownDeparture,
-    shouldShowDeparture: shouldShowDeparture
+    shouldShowDeparture: shouldShowDeparture,
+    summarizeAlerts: summarizeAlerts
   });
 
   function useBlackText(route) {
@@ -109,5 +110,28 @@ function RouteItemCtrl(Nearby) {
     return route.alerts && route.alerts.some(function(alert) {
       return alert.severity === 'Severe';
     });
+  }
+
+  function summarizeAlerts(route) {
+    if (!route.alerts || route.alerts.length === 0) {
+      alert('No alerts to summarize!');
+      return;
+    }
+    fetch('/api/alerts/summary', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ alerts: route.alerts })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.summary) {
+          alert('AI Summary:\n' + data.summary);
+        } else {
+          alert('Failed to summarize alerts.');
+        }
+      })
+      .catch(err => {
+        alert('Error: ' + err.message);
+      });
   }
 }

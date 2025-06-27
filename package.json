@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "server/app.js",
   "dependencies": {
+    "axios": "^1.10.0",
     "body-parser": "~1.5.2",
     "composable-middleware": "^0.3.1",
     "compression": "^1.7.4",

@@ -49,7 +49,8 @@ function ConfigCtrl($rootScope, $state, $translate, ScreenConfig) {
     duplicate: duplicate,
     closePanel: closePanel,
     exportConfig: exportConfig,
-    importConfig: importConfig
+    importConfig: importConfig,
+    summarizeAlerts: summarizeAlerts
   });
 
   // Initialize current location
@@ -187,5 +188,37 @@ function ConfigCtrl($rootScope, $state, $translate, ScreenConfig) {
         alert('Error importing configuration: ' + e.message);
       }
     }
+  }
+
+  function summarizeAlerts() {
+    // For demo: summarize all alerts from all routes (or you can pick a specific route)
+    var allAlerts = [];
+    if (window.ctrl && window.ctrl.routes) {
+      window.ctrl.routes.forEach(function(route) {
+        if (route.alerts && route.alerts.length > 0) {
+          allAlerts = allAlerts.concat(route.alerts);
+        }
+      });
+    }
+    if (allAlerts.length === 0) {
+      alert('No alerts to summarize!');
+      return;
+    }
+    fetch('/api/alerts/summary', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ alerts: allAlerts })
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.summary) {
+          alert('AI Summary:\n' + data.summary);
+        } else {
+          alert('Failed to summarize alerts.');
+        }
+      })
+      .catch(err => {
+        alert('Error: ' + err.message);
+      });
   }
 }

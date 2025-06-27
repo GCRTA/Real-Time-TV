@@ -34,6 +34,7 @@
     <div class="flip-card-back">
       <div class="back-content">
         <h2 class="header"><span class="back-content-alert-icon">⚠️</span>{{ ctrl.getRouteName(route) }} Alerts</h2>
+        <button ng-if="ctrl.hasAlerts(route)" type="button" class="btn btn-info" ng-click="ctrl.summarizeAlerts(route)">Summarize Alerts (AI)</button>
         <ul>
           <li class="alert-details alert-{{alert.severity.toLowerCase()}}" ng-repeat="alert in ctrl.getSortedAlerts(route)">
             <p class="alert-title">{{ alert.title }}</p>
