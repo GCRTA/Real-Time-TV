@@ -33,6 +33,7 @@ function RouteItemCtrl(Nearby) {
     getRouteName: getRouteName,
     hasAlerts: hasAlerts,
     getSortedAlerts: getSortedAlerts,
+    hasSevereAlert: hasSevereAlert,
 
     hasShownDeparture: Nearby.hasShownDeparture,
     shouldShowDeparture: shouldShowDeparture
@@ -101,6 +102,12 @@ function RouteItemCtrl(Nearby) {
     const severityOrder = { 'Severe': 0, 'Warning': 1, 'Info': 2 };
     return route.alerts.slice().sort(function(a, b) {
       return (severityOrder[a.severity] ?? 99) - (severityOrder[b.severity] ?? 99);
+    });
+  }
+
+  function hasSevereAlert(route) {
+    return route.alerts && route.alerts.some(function(alert) {
+      return alert.severity === 'Severe';
     });
   }
 }
