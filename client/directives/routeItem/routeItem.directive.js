@@ -90,7 +90,12 @@ function RouteItemCtrl(Nearby) {
       return route.route_short_name + ' Line';
     }
     // Fallback to route_short_name if elements[1] is empty or falsy
-    return (route.route_display_short_name && route.route_display_short_name.elements[1]) || route.route_short_name;
+    var name = (route.route_display_short_name && route.route_display_short_name.elements[1]) || route.route_short_name;
+    // Prepend # if the name is a number
+    if (/^\d+$/.test(name)) {
+      return '#' + name;
+    }
+    return name;
   }
 
   function hasAlerts(route) {
