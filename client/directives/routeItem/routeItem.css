@@ -444,7 +444,18 @@ li.alert-details::after{
     left: -2.5em;
 }
 
-
+li.alert-details.alert-severe::after{
+  background-color: #ff0f0f;
+  border: 3px solid #760000;
+}
+li.alert-details.alert-warning::after{
+  background-color: #FFB657;
+  border: 3px solid #be6b00;
+}
+li.alert-details.alert-info::after{
+  background-color: #696969;
+  border: 3px solid #303030;
+}
 
 @keyframes flip {
   0% {

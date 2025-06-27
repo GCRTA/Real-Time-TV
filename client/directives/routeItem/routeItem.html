@@ -35,7 +35,7 @@
       <div class="back-content">
         <h2 class="header"><span class="back-content-alert-icon">⚠️</span>{{ ctrl.getRouteName(route) }} Alerts</h2>
         <ul>
-          <li class="alert-details" ng-repeat="alert in ctrl.getSortedAlerts(route)">
+          <li class="alert-details alert-{{alert.severity.toLowerCase()}}" ng-repeat="alert in ctrl.getSortedAlerts(route)">
             <p class="alert-title">{{ alert.title }}</p>
             <!-- <p class="alert-description">{{ alert.description }}</p> -->
             <!-- <p class="alert-time" ng-if="alert.start_time">From: {{ alert.start_time | date:'MMM d, h:mm a' }}</p> -->
