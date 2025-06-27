@@ -2,7 +2,8 @@
 
 A customized display system adapted from [TransitApp's Transit-TV](https://github.com/TransitApp/Transit-TV), used by the Greater Cleveland Regional Transit Authority (GCRTA) to show real-time departure information, alerts, and internal messages on facility screens.
 
-![Transit-TV Screenshot](./screenshot.png)
+![Real-Time TV Screenshot](./screenshot.png)
+![Real-Time TV Screenshot](./screenshot_flipped.png)
 
 > ⚠️ **Disclaimer**  
 > This project was originally built by the Transit team as a demonstration of their Transit API. This customized version is maintained by GCRTA and comes with no guarantee of any kind.
