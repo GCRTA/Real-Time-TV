@@ -14,7 +14,7 @@ exports.summarize = async function(req, res) {
 
   const prompt = alerts.map(a => `Title: ${a.title}\nDescription: ${a.description}`).join('\n\n');
   const messages = [
-    { role: 'system', content: 'You are a helpful assistant that summarizes transit alerts for a route.' },
+    { role: 'system', content: 'You are a helpful assistant that summarizes transit alerts for the Greater Cleveland Regional Transit Authority.' },
     { role: 'user', content: `Summarize these alerts for a transit route in 1-2 sentences:\n${prompt}` }
   ];
 
