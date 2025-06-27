@@ -60,9 +60,10 @@ function Nearby($http, $q) {
 
   function shouldShowDeparture(departure) {
 
-    //For development purpose, uncomment next line to see lines. Remember to comment out when building for production
-    // return true;
-
+    if (process.env.NODE_ENV !== 'production') {
+      return true;
+    }
+    
     // In production, check the time window.
     var diff = departure * 1000 - new Date().getTime();
     return diff > 0 && diff <= 130 * 60000;
