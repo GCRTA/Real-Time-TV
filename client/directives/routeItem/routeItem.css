@@ -451,7 +451,7 @@ li.alert-details.alert-info{
 li.alert-details.alert-severe::after{
   background-color: #ff0f0f;
   border: 3px solid #760000;
-  animation: severe-pulse 1s infinite;
+  animation: severe-pulse 1.5s infinite;
   top: .5em;
 }
 li.alert-details.alert-warning::after{
@@ -483,12 +483,12 @@ li.alert-details.alert-info::after{
 
 @keyframes severe-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 15, 15, 1);
+    box-shadow: 0 0 0 0 rgba(255, 15, 15, 0.7);
     transform: scale(1);
   }
   70% {
-    box-shadow: 0 0 20px 12px rgba(255, 15, 15, 0.5);
-    transform: scale(1.25);
+    box-shadow: 0 0 10px 6px rgba(255, 15, 15, 0.3);
+    transform: scale(1.08);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 15, 15, 0.1);
