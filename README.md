@@ -6,7 +6,7 @@ A customized display system adapted from [TransitApp's Transit-TV](https://githu
 ![Real-Time TV Screenshot](./screenshot_flipped.png)
 
 > ⚠️ **Disclaimer**  
-> This project was originally built by the Transit team as a demonstration of their Transit API. This customized version is maintained by GCRTA and comes with no guarantee of any kind.
+> This project was originally built by the Transit team as a demonstration of their Transit API. Usage of this project comes with no  guarantee of any kind.
 
 ---
 
